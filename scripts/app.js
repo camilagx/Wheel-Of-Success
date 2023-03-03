@@ -1,4 +1,4 @@
-const myKey = config.MY_KEY;
+const myKey = apiAccess.key;
 const qwerty = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
 const phraseUL = phrase.firstElementChild;
@@ -31,6 +31,7 @@ fetch(url, options)
   .then(data => {
     const phrases = data;
     const phrase = getRandomPhraseAsArray(phrases);
+    console.log(phrase);
     addPhraseToDisplay(phrase);
 
     })
