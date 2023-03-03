@@ -1,4 +1,4 @@
-const myKey = apiAccess.key;
+const myKey = API.key;
 const qwerty = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
 const phraseUL = phrase.firstElementChild;
