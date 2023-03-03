@@ -12,6 +12,8 @@ startBtn.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
 
+
+
 //API Call for random words
 const url = 'https://random-words5.p.rapidapi.com/getMultipleRandom?count=5&minLength=4&maxLength=8';
 
@@ -22,7 +24,6 @@ const options = {
       'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
     }
   };
-  
   
 fetch(url, options)
   .then(res => res.json())
