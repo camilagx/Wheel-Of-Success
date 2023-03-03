@@ -13,7 +13,9 @@ startBtn.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
 
-
+document.addEventListener('keydown', (e) => {
+  console.log(e.key);
+});
 
 //API Call for random words
 const url = 'https://random-words5.p.rapidapi.com/getMultipleRandom?count=5&minLength=4&maxLength=8';
