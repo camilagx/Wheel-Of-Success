@@ -28,10 +28,22 @@ fetch(url, options)
   .then(data => {
     const phrases = data;
     const phrase = getRandomPhraseAsArray(phrases);
+    addPhraseToDisplay(phrase);
 
     })
     .catch(err => console.error(err));
 
+
+function addPhraseToDisplay(arr){
+  const phraseDiv = document.querySelector('#phrase');
+  const ul = phraseDiv.firstElementChild;
+
+  arr.forEach(x => {
+    const li = document.createElement('li');
+    li.textContent = x;
+    ul.appendChild(li);
+  })
+}
 
 function getRandomPhraseAsArray(phrases){
   const index = Math.floor(Math.random() * phrases.length);
