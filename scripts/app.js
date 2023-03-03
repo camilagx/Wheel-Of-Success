@@ -14,7 +14,10 @@ startBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', (e) => {
+  
+
   //get the key entered by user
+  const keyVal = e.key
 
   //find button with matching key 
 
@@ -25,6 +28,27 @@ document.addEventListener('keydown', (e) => {
   //invoke checkLetter function and store return value to variable letterFound
 
 });
+
+function findDiv(letter) {
+  /*
+  const keyRowDiv_1 = qwerty.firstElementChild;
+  const keyRowDiv_2 = keyRowDiv_1.nextElementSibling;
+  const keyRowDiv_3 = keyRowDiv_2.nextElementSibling;
+*/
+
+  let keyRowDiv = '';
+  const keyRow = {
+    divOne : ['q','w','e','r','t','y','u','i','o','p'],
+    divTwo : ['a','s','d','f','g','h','j','k', 'l'],
+    divThree : ['z','x','c','v','b','n','m']
+  }
+
+  for (let div in keyRow){
+    if (keyRow[div].includes(letter)) {
+      keyRowDiv = div;
+    }
+  }
+}
 
 //API Call for random words
 const url = 'https://random-words5.p.rapidapi.com/getMultipleRandom?count=5&minLength=4&maxLength=8';
