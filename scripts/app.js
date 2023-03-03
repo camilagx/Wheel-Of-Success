@@ -14,7 +14,16 @@ startBtn.addEventListener('click', () => {
 });
 
 document.addEventListener('keydown', (e) => {
-  console.log(e.key);
+  //get the key entered by user
+
+  //find button with matching key 
+
+  //set that button to class name 'chosen'
+
+  //set that button's attribute to disabled
+  
+  //invoke checkLetter function and store return value to variable letterFound
+
 });
 
 //API Call for random words
