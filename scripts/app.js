@@ -1,3 +1,4 @@
+const myKey = config.MY_KEY;
 const qwerty = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
 const phraseUL = phrase.firstElementChild;
@@ -20,7 +21,7 @@ const url = 'https://random-words5.p.rapidapi.com/getMultipleRandom?count=5&minL
 const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'defaa861a2mshd079018ef2e189dp1f44fcjsna2dc5f200234',
+      'X-RapidAPI-Key': myKey,
       'X-RapidAPI-Host': 'random-words5.p.rapidapi.com'
     }
   };
