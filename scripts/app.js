@@ -1,5 +1,6 @@
 const qwerty = document.querySelector('#qwerty');
 const phrase = document.querySelector('#phrase');
+const phraseUL = phrase.firstElementChild;
 //once missed = 5, player loses
 let missed = 0;
 
@@ -10,6 +11,8 @@ startBtn.addEventListener('click', () => {
   const overlay = document.getElementById('overlay');
   overlay.style.display = 'none';
 });
+
+
 
 //API Call for random words
 const url = 'https://random-words5.p.rapidapi.com/getMultipleRandom?count=5&minLength=4&maxLength=8';
@@ -22,7 +25,6 @@ const options = {
     }
   };
   
-  
 fetch(url, options)
   .then(res => res.json())
   .then(data => {
@@ -33,15 +35,26 @@ fetch(url, options)
     })
     .catch(err => console.error(err));
 
+function checkLetter(btn){
+  const lis = phraseUL.children;
+  let letter = null;
 
+  lis.forEach((li, index) => {
+    if (btn.textContent === li.textContent){
+      li.className = 'show';
+      letter= li.textContent;
+    }
+  })
+
+  return letter;
+}
+    
 function addPhraseToDisplay(arr){
-  const phraseDiv = document.querySelector('#phrase');
-  const ul = phraseDiv.firstElementChild;
-
   arr.forEach(x => {
     const li = document.createElement('li');
     li.textContent = x;
-    ul.appendChild(li);
+    li.className = 'letter';
+    phraseUL.appendChild(li);
   })
 }
 
