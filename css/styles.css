@@ -98,8 +98,9 @@ button {
 
 .show {
   color: #000;
-  background-color: #76CE82;
+  background-color:  rgb(240, 166, 29);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
 }
 
 /* Keyboard */
@@ -117,14 +118,20 @@ button {
 }
 
 .btn__reset {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
   padding: 8px;
   margin: 50px auto;
   background: #FFFFFF;
   border-radius: 5px;
   font-size: var(--font-size-medium);
+  transition: all 100ms ease-in-out;
+  box-shadow: 1px 1px 4px black;
 }
 
 .btn__reset:hover{
+  background-color: rgb(233, 165, 39);
+  color: white;
   cursor: pointer;
 }
 
@@ -152,7 +159,7 @@ button {
 }
 
 .start a {
-  color: var(--color-win);
+  color: black;
 }
 
 .win {
